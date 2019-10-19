@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <link href="style.css" rel="stylesheet">
+    <link href="style2.css" rel="stylesheet">
+    <link rel="stylesheet" href="styleup.css">
+    <link rel="stylesheet" href="md.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+    <!-- Bootstrap CSS -->
+
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>NoteShare</title>
+    <style type="text/css">
+    .homebg{
+			background-image: url(photo2.jpg);
+			background-size: cover;
+ 			background-repeat: no-repeat;
+      max-width: 100%;
+      /*  max-height: 70%; */
+      height: 50em;
+
+
+
+		}
+    .typography{
+  font: 45px Arial, Helvetica,sans-serif;
+
+  padding:0;
+
+  /* background-color:#f4f4f4; */
+}
+.carousel-inner img {
+      width: 100%;
+      height: 50%;
+  }
+
+     .logo{
+       color: white;
+       font:45px;
+
+     }
+     .showcase{
+  min-height:500px;
+   background:url('photo2.jpg')  0 -400px;
+  text-align:center;
+  /*-- color:#ffffff; */
+}
+.test{
+  padding:40px;
+}
+.jumbotron-footer
+{
+  height:100px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+
+
+    </style>
+  </head>
+  <body >
+    <header>
+      <div class="homebg">
+         <div class="container-fluid">
+           <div class="clearfix">
+           </div>
+
+           <div class="clearfix">
+     			<p class="text-white float-left p-4 mx-5" style="font-size: 45px"><strong>NOTE</strong>share</p>
+     		<div class="btn-group float-right p-5" role="group" aria-label="Basic example">
+       <button type="button" class="btn btn-outline-light btn-lg rounded mx-5 ">Home</button>
+
+      <button type="button" class="btn btn-outline-light btn-lg rounded mx-5">Questions</button>
+       <button type="button" class="btn btn-outline-light btn-lg rounded mx-5">Slides</button>
+      <!-- <button type="button" class="btn btn-outline-light btn-lg rounded mx-5">Upload</button> -->
+<!-- start of modal-->
+<button type="button" class="btn btn-outline-light btn-lg rounded mx-5 modal-button"href="#myModal1">Upload</button>
+
+
+<!-- The Modal -->
+<div id="myModal1" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+
+
+    <div class="modal-body">
+        <form id="contactForm">
+            <p>
+              <label for="dept">Department:</label>
+              <select class="form-control form-control-lg" name="Department" id="dept"  required>
+                  <option value="">Choose... </option>
+                <option value="CSE">CSE</option>
+                <option value="ME">ME</option>
+                <option value="EECE">EECE</option>
+                <option value="CE">CE</option>
+                <option value="CE">AE</option>
+                <option value="CE">ARCHI</option>
+                <option value="CE">NAME</option>
+                <option value="CE">EWCE</option>
+                <option value="CE">PME</option>
+                <option value="CE">IPE</option>
+                <option value="CE">NSE</option>
+                <option value="CE">BME</option>
+                </select>
+
+
+            </p>
+            <p>
+              <label for="level">Level:</label>
+              <select class="form-control form-control-lg" name="Level" id="level"  required>
+                  <option value="">Choose... </option>
+                <option value="L-1">1</option>
+                <option value="L-2">2</option>
+                <option value="L-3">3</option>
+                <option value="L-4">4</option>
+                </select>
+
+            </p>
+            <p>
+              <label for="term">Term:</label>
+              <select class="form-control form-control-lg" name="Term" id="term" onchange="ChangecatList()" required>
+                  <option value="">Choose... </option>
+                <option value="T-1">1</option>
+                <option value="T-2">2</option>
+
+                </select>
+
+            </p>
+            <p>
+
+                <label for="course">Course:</label>
+                <select class="form-control form-control-lg" id="course" name="Course" required></select>
+               <div class="invalid-feedback">
+                   Please provide an activity.
+               </div>
+               <progress value="0" max="100" id="uploader">0%</progress>
+               <input type="file" value="upload" id="fileButton"/>
+
+            <p class="full">
+              <button onclick="myFunction()">Submit</button>
+            </p>
+          </form>
+
+    </div>
+    <p class="close" style="font-size: 1.3em">Close</p><br>
+
+
+  </div>
+
+</div>
+
+
+
+
+      <!-- <button type="button" class="btn btn-outline-light btn-lg rounded mx-5">Log in</button> -->
+     	</div>
+    </div>
+            <div class="mx-auto" style="width: 1000px">
+            <div class="test">
+            <h1 class="text-white text-center p-5">Share Your Notes Today</h1>
+
+            <h4 class="text-white text-center p-3">“No matter how busy you may think you are, you must find time for reading, or surrender yourself to self-chosen ignorance.” </h4>
+          </div>
+          </div>
+           <!-- <img src="photo2-3.jpg" class="img-fluid" alt="Responsive image"> -->
+
+
+
+
+
+          </div>
+      </div>
+
+
+
+
+
+
+    </header>
+ <hr>
+
+   <div class="jumbotron text-center">
+      <h1 class="typography text-center">Departments</h1>
+      <p>Click on the images to visit desired departments</p>
+   </div>
+   <hr>
+
+    <footer>
+
+      <div class="card-deck my-5">
+
+    <div class="card"><a href="cse.html">
+      <img src="img/cse.jpg" class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <h5 class="card-title"><strong>CSE</strong></h5>
+        <p class="card-text">Computer Science and Engineering Department(CSE)</p>
+
+      </div>
+    </div>
+
+
+
+    <div class="card"><a href="eece.html">
+      <img src="img/eece.jpg" class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <h5 class="card-title"><strong>EECE</strong></h5>
+        <p class="card-text">This card has supporting text .</p>
+
+      </div>
+    </div>
+
+
+
+    <div class="card"><a href="mecha.html">
+      <img src="img/mecha2.jpg" class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <h5 class="card-title"><strong>ME</strong></h5>
+        <p class="card-text">This is a wider card with supporting text.</p>
+
+      </div>
+    </div>
+
+
+
+    <div class="card"><a href="ce.html">
+      <img src="img/CE.jpg" class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <h5 class="card-title"><strong>CE</strong></h5>
+        <p class="card-text">This is a wider card with supporting text.</p>
+
+      </div>
+    </div>
+
+
+
+    <div class="card-deck my-5">
+    <div class="card"><a href="arch.html">
+      <img src="img/archi.jpg" class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <h5 class="card-title"><strong>ARCH</strong></h5>
+        <p class="card-text">This is a wider card with supporting text.</p>
+
+      </div>
+    </div>
+    <div class="card"><a href="ae.html">
+      <img src="img/ae.jpg" class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <h5 class="card-title"><strong>AE</strong></h5>
+        <p class="card-text">This is a wider card with supporting text .</p>
+
+      </div>
+    </div>
+    <div class="card"><a href="name.html">
+      <img src="img/name5.jpg" class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <h5 class="card-title"><strong>NAME</strong></h5>
+        <p class="card-text">This is a wider card with supporting .</p>
+
+      </div>
+    </div>
+    <div class="card"><a href="pme.html">
+      <img src="img/pme.jpg" class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <h5 class="card-title"><strong>PME</strong></h5>
+        <p class="card-text">This is a wider card with supporting t.</p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="card-deck my-5">
+  <div class="card"><a href="ipe.html">
+    <img src="img/ipe.jpg" class="card-img-top" alt="..."></a>
+    <div class="card-body">
+      <h5 class="card-title"><strong>IPE</strong></h5>
+      <p class="card-text">This is a wider card with supporting text.</p>
+
+    </div>
+  </div>
+  <div class="card"><a href="bme.html">
+    <img src="img/bm5.jpg" class="card-img-top" alt="..."></a>
+    <div class="card-body">
+      <h5 class="card-title"><strong>BME</strong></h5>
+      <p class="card-text">This is a wider card with supporting text .</p>
+
+    </div>
+  </div>
+  <div class="card"><a href="nse.html">
+    <img src="img/nse.jpg" class="card-img-top" alt="..."></a>
+    <div class="card-body">
+      <h5 class="card-title"><strong>NSE</strong></h5>
+      <p class="card-text">This is a wider card with supporting .</p>
+
+    </div>
+  </div>
+  <div class="card"><a href="ewce.html">
+    <img src="img/ew5.jpg" class="card-img-top " alt="..."></a>
+    <div class="card-body">
+      <h5 class="card-title"><strong>EWCE</strong></h5>
+      <p class="card-text">This is a wider card with supporting t.</p>
+
+    </div>
+  </div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script src="text.js"></script>
+<script src="md.js"></script>
+
+</body>
+
+
+
+
+
+    </footer>
+    <footer class="page-footer font-small">
+
+  <!-- Copyright -->
+  <hr>
+  <div class="jumbotron jumbotron-footer" style="background-color:#abafb5">
+  <div class="footer-copyright text-center">© 2019 Copyright: <strong><h4>Mostafizur Rahman</h4></strong>
+    <!-- <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a> -->
+  </div>
+  </div>
+  <!-- Copyright -->
+
+
+  </footer>
+
+
+
+
+</html>
